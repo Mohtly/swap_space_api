@@ -27,7 +27,7 @@ with open('/home/swapper/Development/secretkey.txt') as f:
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['167.172.196.191']
 
 
 # Application definition
