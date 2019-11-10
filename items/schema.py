@@ -43,7 +43,7 @@ class CreateItem(graphene.Mutation):
         item.save()
 
         return CreateItem(
-            item_id=item.item_id,
+            # item_id=item.item_id,
             photo=item.photo,
             value_low=item.value_low,
             value_high=item.value_high,

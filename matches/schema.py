@@ -15,13 +15,14 @@ class Query(graphene.ObjectType):
     def resolve_matches(self, info, **kwargs):
         return Matches.objects.all()
 
+
 class CreateMatches(graphene.Mutation):
     item_id_1 = graphene.Int()
     item_id_2 = graphene.Int()
 
     class Arguments:
-    	item_id_1 = graphene.Int()
-    	item_id_2 = graphene.Int()
+        item_id_1 = graphene.Int()
+        item_id_2 = graphene.Int()
 
     def mutate(self, info, item_id_1, item_id_2):
         matches = Matches(item_id_1=item_id_1, item_id_2=item_id_2)
@@ -32,6 +33,7 @@ class CreateMatches(graphene.Mutation):
             item_id_2=matches.item_id_2
         )
 
-#4
+
+# 4
 class Mutation(graphene.ObjectType):
     create_matches = CreateMatches.Field()
