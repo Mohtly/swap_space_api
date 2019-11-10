@@ -12,11 +12,11 @@ class Migration(migrations.Migration):
 
     operations = [
         migrations.CreateModel(
-            name='User',
+            name='Matches',
             fields=[
-                ('user_id', models.AutoField(primary_key=True, serialize=False)),
-                ('first_name', models.CharField(max_length=30)),
-                ('last_name', models.CharField(max_length=30)),
+                ('matches_id', models.AutoField(primary_key=True, serialize=False)),
+                ('item_id_1', models.IntegerField()),
+                ('item_id_2', models.IntegerField()),
                 ('email', models.CharField(max_length=50)),
                 ('date_time_created', models.DateTimeField(auto_now_add=True)),
             ],
