@@ -129,4 +129,12 @@ STATIC_URL = '/static/'
 
 GRAPHENE = {
     'SCHEMA': 'swap_space_api.schema.schema',
+    'MIDDLEWARE': [
+            'graphql_jwt.middleware.JSONWebTokenMiddleware',
+        ],
 }
+
+AUTHENTICATION_BACKENDS = [
+    'graphql_jwt.backends.JSONWebTokenBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
