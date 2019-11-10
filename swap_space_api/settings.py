@@ -26,9 +26,9 @@ SECRET_KEY = 'i4&%1#rbidp-*h&ws@spsr)#18pispz(@kw#fdcw8z14&4543j'
 # f.close()
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['167.172.196.191']
+ALLOWED_HOSTS = []
 
 
 # Application definition
